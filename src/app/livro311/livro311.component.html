@@ -1,0 +1,7 @@
+<p>
+  livro311 works!
+</p>
+<!-- The # before input1 allows you to get a element reference and it's value -->
+<input type="textbox" #input1><br> 
+<input type="textbox" value={{mensagem}} >
+<button (click)="onClickMe(input1.value)">Submit</button> 
