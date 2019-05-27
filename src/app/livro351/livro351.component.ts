@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-export interface Funcionario {
-  id: number;
-  nome: string;
-  salario: number;
-}
-
 @Component({
   selector: 'app-livro351',
   templateUrl: './livro351.component.html',

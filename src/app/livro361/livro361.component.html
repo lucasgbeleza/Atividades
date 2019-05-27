@@ -1,3 +1,10 @@
 <p>
   livro361 works!
 </p>
+
+<form action="#">
+  <input type="checkbox" value="id" #id> Matrícula
+  <input type="checkbox" value="nome" #nome> Nome
+  <input type="checkbox" value="salario" #salario> Salário
+  <button type="submit" (click)="displayData(id.value, nome.value)"> Submit </button>
+</form>
