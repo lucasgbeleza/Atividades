@@ -1,0 +1,13 @@
+<p>
+  livro351 works!
+</p>
+<!-- Corrigir pois não está no padrão do livro -->
+<mat-form-field>
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option value="teste">--none--</mat-option>
+      <mat-option *ngFor="let funcionario of arrFuncionario" value="Id: {{funcionario.id}}, Nome: {{funcionario.nome}}, Salario: {{funcionario.salario}}">{{funcionario.nome}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>Dados: {{selected}} </p>
+    

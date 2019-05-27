@@ -20,14 +20,16 @@ export class Livro342Component implements OnInit {
   ngOnInit() {
   }
 
-
-  mostrarDados(nome: string):void {
+  // Para fazer no banco de dados, uma consulta com o filter seria mais indicada e só depois trazer os resultados fultrados
+  // para a tela
+  mostrarDados(nome: string): void {
+// tslint:disable-next-line: prefer-for-of
     for (let index = 0; index < this.arrFuncionario.length; index++) {
-      let element = `matricula = ${this.arrFuncionario[index].id} \n nome = ${this.arrFuncionario[index].nome.trim()} \n salario = ${this.arrFuncionario[index].salario}`; 
-      if (this.arrFuncionario[index].nome == nome) {
+// tslint:disable-next-line: max-line-length
+      const element = `matricula = ${this.arrFuncionario[index].id} \n nome = ${this.arrFuncionario[index].nome.trim()} \n salario = ${this.arrFuncionario[index].salario}`; 
+      if (this.arrFuncionario[index].nome === nome) {
         alert(element);
       }
-      
     }
   }
 }
