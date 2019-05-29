@@ -16,13 +16,17 @@ export class TesteComJsonComponent implements OnInit {
   ngOnInit() {
     this.httpService.get('./assets/pokemons.json').subscribe(
       data => {
-        this.pokeArray = data as string[];
+        this.pokeArray = data["Pokemons"] as string[]; 
       }
     )
   }
 
+
   displayData(){
-   alert(this.pokeArray);
+    // Tá mostrando erro mas deu certo sim
+    for (const pokemon of this.pokeArray) {
+      console.log(pokemon.name);
+    }
   }
 
 }
